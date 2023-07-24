@@ -1,0 +1,17 @@
+package Util;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class DatabaseUtil {
+
+	 private static final String DATABASE_URL = "jdbc:mysql://localhost:3310/toko_kue";
+	    private static final String USERNAME = "root";
+	    private static final String PASSWORD = "12345";
+
+	    public static Connection getConnection() throws SQLException {
+	        return DriverManager.getConnection(DATABASE_URL, USERNAME, PASSWORD);
+	    }
+	
+}
